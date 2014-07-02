@@ -1,10 +1,3 @@
-/* get rid top and side white space bars using margin and height */
-html {
-overflow:hidden;
-overflow-x:hidden;
-overflow-y:hidden;
-}
-
 body {
 font-size: 0;
 margin: 25px 0px 0px 450px;
@@ -15,80 +8,102 @@ overflow-y:hidden;  */
 
 #container
 {
-position:relative;
+
 background-color:black;
+
 width:1000px;
 height:1000px;
 
-/* overflow:hidden;
-overflow-x:hidden;
-overflow-y:hidden; */
-
+overflow:hidden;
+position:relative;
 display:inline-block;
 }
 
 #header
 {
 font-size: medium;
-position:relative;
 width:100%;
 height:26px;
 background-color:brown;
-border-bottom-width: 2px; 
-border-bottom-style: ridge;
+
+/* border-bottom-width: 2px;
+border-bottom-style: ridge; */
+
+overflow:hidden;
+position:relative;
+display:inline-block;
+}
+
+#headerleft
+{
+background-color:green;
+
+overflow:hidden;
+position:relative;
+display:inline-block;
+}
+
+#headerright
+{
+background-color:purple;
+
+overflow:hidden;
+position:relative;
+display:inline-block;
 }
 
 #left
 {
 font-size: medium;
-position:relative;
+
 width:100px;
 height:100px;
 background-color:lightblue;
 color:white;
+
 font-family:Tahoma, Geneva, sans-serif;
 
-/* overflow:hidden;
-overflow:hidden;
-overflow-x:hidden; */
-
-display: inherit;
-}	
+position:relative;
+display:inline-block;
+}
 
 #center
 {
 font-size: medium;
-position:relative;
+
 width:100px;
 height:100px;
 background-color:grey;
 font-family:Tahoma, Geneva, sans-serif;
-overflow:hidden;
 
-display: inherit;
+overflow:hidden;
+position:relative;
+display:inline-block;
 }
 
 #right
 {
 font-size: medium;
-position:relative;
+
 width:100px;
 height:100px;
 background-color:blue;
 
-/* overflow:hidden;
-overflow-x:hidden;
-overflow-y:hidden; */
-
-display: inherit;
+overflow:hidden;
+position:relative;
+display:inline-block;
 }
 
 #footer
 {
 font-size: medium;
-position:relative;
+
 width:100%;
 height:26px;
 background-color:brown;
+
+overflow:hidden;
+position:relative;
+display:inline-block;
 }
 
