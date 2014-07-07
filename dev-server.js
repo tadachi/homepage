@@ -1,7 +1,7 @@
 var express         = require('express');
 var bodyParser      = require('body-parser');
 var methodOverride  = require('method-override');
-var port            = parseInt(process.env.PORT, 10) || 4001;
+var port            = parseInt(process.env.PORT, 10) || 4000;
 var fs              = require('fs');
 var path            = require('path');
 var router          = express.Router();
@@ -24,6 +24,8 @@ var home = require('express.io')();
 home.use('/js', express.static(__dirname + '/view/js'));
 home.use('/css', express.static(__dirname + '/view/css'));
 home.use('/img', express.static(__dirname + '/view/img'));
+home.use('/pdf', express.static(__dirname + '/view/pdf'));
+home.use('/res', express.static(__dirname + '/view/res'));
 
 home.set('jsonp callback', true);
 /* Testing headers */
@@ -52,8 +54,6 @@ home.get('/', function(req, res) {
 /* Outputs the users' ips visiting your website*/
 app.io.route('home', function (req) {
     console.log(req.ip);
-
-    next();
 });
 
 /* Debug */

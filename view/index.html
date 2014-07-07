@@ -2,15 +2,18 @@
 <html lang='en' ng-app='app'>
     <head>
         <meta content='text/html; charset=utf-8' http-equiv='content-type'>
-        <title>Template</title>
+        <title>Takumi Adachi's Homepage</title>
         <link rel='stylesheet' href='/css/main.css'>
+        <link rel='stylesheet' href='/css/crocodoc.viewer.min.css'>
         <!--load JQuery before Angular-->
         <script src='js/jquery-2.1.1.min.js'></script>
+        <script src='js/pdfjs-1.0.68-dist/build/pdf.js'></script>
+
         <!-- Angularjs -->
-        <script src='js/angular.1.3.0b11.js'></script>
+<!--         <script src='js/angular.1.3.0b11.js'></script> -->
 
 <script>
-    var app = angular.module('app', []);
+//     var app = angular.module('app', []);
 
     function calcResolutions() {
         var offset = 25; //Height for our header and footer
@@ -57,6 +60,7 @@
 
     function applyResolutions() {
         res = calcResolutions();
+
         $('#container').css('width', res.containerW);
         $('#container').css('height', res.containerH);
 
@@ -84,120 +88,92 @@
     }
 
     $( document ).ready(function() {
-        applyResolutions();
-    });
+//         applyResolutions();
 
-    app.directive('isOnline', function() {
-        return {
-            $scope: {
-                value: '=',
-                href: '=',
-                link: '@',
-            },
-            restrict: 'AEC',
-//             controller: function($scope, $element){
+        /* Default page to load. */
+        $( "#info" ).load("res/about.htm");
+        window.location = "#about";
+
+    });
+/*
+ * Shows if the website is online or not. *WIP
+ */
+//     app.directive('isOnline', function() {
+//         return {
+//             $scope: {
+//                 value: '=',
+//                 href: '=',
+//                 link: '@',
+//             },
+//             restrict: 'AEC',
+// //             controller: function($scope, $element){
+// //                 $scope.value = 'pinging...';
+// //                 $scope.href = $element.attr('link');
+// //                 console.log($element.attr('link'));
+// //             },
+//             cache: false,
+//             link: function($scope, $element) {
 //                 $scope.value = 'pinging...';
 //                 $scope.href = $element.attr('link');
-//                 console.log($element.attr('link'));
-//             },
-            cache: false,
-            link: function($scope, $element) {
-                $scope.value = 'pinging...';
-                $scope.href = $element.attr('link');
-               //var url = 'http://whateverorigin.org/get?url=' + encodeURIComponent($element.attr('link')) + '&callback=?';
-                var url = 'http://whateverorigin.org/get?url=' + $element.attr('link') + '&callback=?';
-                console.log(url);
+
+//                 var url = $element.attr('link');
+//                 //var url = 'http://whateverorigin.org/get?url=' + encodeURIComponent($element.attr('link')) + '&callback=?';
+//                 //var url = 'http://whateverorigin.org/get?url=' + encodeURIComponent($element.attr('link')) + '&callback=?';
+// //                 $.getJSON(url, function(data){
+// //                     console.log(data);
+// //                 });
 //                 $.ajax({
-//                     url: url,
+//                     url: $element.attr('link'),
 //                     timeout: 1000,
 //                     dataType: 'json',
 //                     statusCode: {
 //                         200: function() {
+//                             console.log('200');
 //                             $scope.$apply(function() {
 //                                 $scope.value = '200';
 //                             });
 //                         },
 //                         404: function() {
+//                             console.log('400');
 //                             $scope.$apply(function() {
 //                                 $scope.value = 'loading';
 //                             });
 //                         },
 //                         500: function() {
+//                             console.log('500');
+//                             $scope.$apply(function() {
+//                                 $scope.value = '500';
+//                             });
+//                         },
+//                         503: function() {
+//                             console.log('503');
 //                             $scope.$apply(function() {
 //                                 $scope.value = '500';
 //                             });
 //                         }
-//                     },
+//                     }
+//                 }).done(function(data) {
+//                     console.log(url);
+//                     console.log(data);
+//                 }).fail(function(data) {
+//                     console.log(url);
+//                     console.log(data);
 //                 })
 
-            }
-        };
-    });
+//             }
+//         };
+//     });
+
+    'use strict';
+
+    PDFJS.workerSrc = 'js/pdfjs-1.0.68-dist/build/pdf.worker.js';
+
+
 
 </script>
 
     </head>
     <body>
-
         <div id='container'>
-
-            <div id='headerleft' class='panel'>
-
-            </div>
-
-            <div id='header' class='panel'>
-            About Projects Resume Blog Links
-            </div>
-
-            <div id='headerright' class='panel'>
-
-            </div>
-
-            <div id='left' class='panel'>
-            </div>
-
-            <div id='center' class='panel'>
-                <div id='centerinfo'>
-                    <h2>About</h2>
-                    <p>My name is Takumi Adachi is a Canadian developer based in Victoria BC. In my free time, I develop web apps to tackle very specific problems.</p>
-                    He is currently using writing code in HTML/CSS, Javascript and developing using NodeJS and its various plugins. Programming languages he has worked with
-                    include: Java, C, Python, PHP. Takumi develops his code in vim, Eclipse, and notepad++.
-                    <p>He has a diploma in information technology from Camosun College (Victoria, BC).</p>
-                    </p>
-                    <h2>
-                    Latest Projects:
-                    </h2>
-                    <ul>
-                        <li>
-                            <is-online link='http://srl.takbytes.com'><a href='{{href}}'>srlplayer</a> <a href='https://github.com/tadachi/srlplayer'>(github)</a> - a twitchstreamer for speedrunners from speedrunslive.com {{value}}</is-online>
-
-                        </li>
-                        <li>
-                            <is-online link='http://mtc.takbytes.com'><a href={{href}}>multitwitchchat</a> <a href='https://github.com/tadachi/multitwitchchat'>(github)</a> - a twitchstreamer for speedrunners from speedrunslive.com {{value}}</is-online>
-                            </is-online>
-                        </li>
-<!--                         <li>
-                            <a href='http://asdfklasdlfajsdljfas.ca' is-online>asdf</a> - a twitchstreamer for speedrunners from speedrunslive.com -->
-                             <div id='result'></div>
-                        </li>
-                    </ul>
-                    <h2>
-                    Related Links:
-                    </h2>
-                    <ul>
-                        <li>
-                            My <a href='{{link}}'>github</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id='right' class='panel'>
-            </div>
-
-            <div id='footer' class='panel'>
-            </div>
-        </div>
-
     </body>
 </html>

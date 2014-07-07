@@ -1,4 +1,5 @@
-body {
+body
+{
 font-size: 0;
 margin: 25px 0px 0px 450px;
 /* overflow:hidden;
@@ -8,11 +9,10 @@ overflow-y:hidden;  */
 
 #container
 {
-
 background-color:black;
 
-width:1000px;
-height:1000px;
+width: 1024px;
+height: 880px;
 
 overflow:hidden;
 position:relative;
@@ -21,14 +21,25 @@ display:inline-block;
 
 #header
 {
-font-size: medium;
-width:100%;
-height:26px;
-background-color:brown;
+font-size:medium;
 
-/* border-bottom-width: 2px;
-border-bottom-style: ridge; */
+width: 76%;
+height: 3%;
 
+background-color: red;
+
+overflow:hidden;
+position:relative;
+display:inline-block;
+}
+
+.head:hover
+{
+font-size:medium;
+color:blue;
+background-color:yellow;
+
+cursor:pointer;
 overflow:hidden;
 position:relative;
 display:inline-block;
@@ -36,6 +47,10 @@ display:inline-block;
 
 #headerleft
 {
+
+width: 12%;
+height: 3%;
+
 background-color:green;
 
 overflow:hidden;
@@ -45,24 +60,24 @@ display:inline-block;
 
 #headerright
 {
+width: 12%;
+height: 3%;
+
 background-color:purple;
 
-overflow:hidden;
 position:relative;
 display:inline-block;
 }
 
 #left
 {
-font-size: medium;
+width: 3%;
+height: 94%;
 
-width:100px;
-height:100px;
 background-color:lightblue;
 color:white;
 
-font-family:Tahoma, Geneva, sans-serif;
-
+overflow:hidden;
 position:relative;
 display:inline-block;
 }
@@ -71,9 +86,10 @@ display:inline-block;
 {
 font-size: medium;
 
-width:100px;
-height:100px;
-background-color:grey;
+width: 94%;
+height: 94%;
+
+background-color:lightgray;
 font-family:Tahoma, Geneva, sans-serif;
 
 overflow:hidden;
@@ -83,10 +99,9 @@ display:inline-block;
 
 #right
 {
-font-size: medium;
+width: 3%;
+height: 94%;
 
-width:100px;
-height:100px;
 background-color:blue;
 
 overflow:hidden;
@@ -94,16 +109,49 @@ position:relative;
 display:inline-block;
 }
 
+
+
 #footer
 {
-font-size: medium;
+background-color:lightgreen;
 
-width:100%;
-height:26px;
-background-color:brown;
+width: 76%;
+height: 3%;
 
 overflow:hidden;
 position:relative;
 display:inline-block;
 }
 
+#footerleft
+{
+width: 12%;
+height: 3%;
+
+background-color:pink;
+
+position:relative;
+display:inline-block;
+}
+
+#footerright
+{
+width: 12%;
+height: 3%;
+
+background-color:orange;
+
+position:relative;
+display:inline-block;
+}
+
+@font-face {
+font-family: 'SansationLight';
+src: url('./SansationLight.eot');
+src: local('SansationLight'), url('./SansationLight.woff') format('woff'), url('./SansationLight.ttf') format('truetype');
+}
+
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_423">Text with this font applied</p> */
+.senlightfont {
+    font-family: 'SansationLight' !important;
+} /* Font downloaded from FontsForWeb.com */
