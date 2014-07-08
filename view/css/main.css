@@ -1,7 +1,7 @@
 body
 {
 font-size: 0;
-margin: 25px 0px 0px 450px;
+
 /* overflow:hidden;
 overflow-x:hidden;
 overflow-y:hidden;  */
@@ -9,10 +9,9 @@ overflow-y:hidden;  */
 
 #container
 {
-background-color:black;
+font-size: 0;
 
-width: 1024px;
-height: 880px;
+background-color:gray;
 
 overflow:hidden;
 position:relative;
@@ -21,10 +20,7 @@ display:inline-block;
 
 #header
 {
-font-size:medium;
-
-width: 76%;
-height: 3%;
+font-size: medium;
 
 background-color: red;
 
@@ -35,7 +31,6 @@ display:inline-block;
 
 .head:hover
 {
-font-size:medium;
 color:blue;
 background-color:yellow;
 
@@ -45,49 +40,9 @@ position:relative;
 display:inline-block;
 }
 
-#headerleft
-{
-
-width: 12%;
-height: 3%;
-
-background-color:green;
-
-overflow:hidden;
-position:relative;
-display:inline-block;
-}
-
-#headerright
-{
-width: 12%;
-height: 3%;
-
-background-color:purple;
-
-position:relative;
-display:inline-block;
-}
-
-#left
-{
-width: 3%;
-height: 94%;
-
-background-color:lightblue;
-color:white;
-
-overflow:hidden;
-position:relative;
-display:inline-block;
-}
-
 #center
 {
-font-size: medium;
-
-width: 94%;
-height: 94%;
+font-size: 0;
 
 background-color:lightgray;
 font-family:Tahoma, Geneva, sans-serif;
@@ -97,52 +52,69 @@ position:relative;
 display:inline-block;
 }
 
-#right
+.column
 {
-width: 3%;
-height: 94%;
-
-background-color:blue;
-
-overflow:hidden;
-position:relative;
-display:inline-block;
+margin: 0 0 0px 385px;
+overflow: hidden;
 }
 
+.row-even
+{
+font-size: medium;
+background-color: lightgray;
+width: 100%;
+overflow: auto;
+padding: 50px 50px 50px 50px;
+}
 
+.row-odd
+{
+font-size: medium;
+background-color: lightblue;
+width: 100%;
+overflow: auto;
+padding: 50px 50px 50px 50px;
+}
 
 #footer
 {
-background-color:lightgreen;
+font-size: 0;
 
-width: 76%;
-height: 3%;
+background-color:lightgreen;
 
 overflow:hidden;
 position:relative;
 display:inline-block;
 }
 
-#footerleft
+.round
 {
-width: 12%;
-height: 3%;
-
-background-color:pink;
-
-position:relative;
-display:inline-block;
+width: 67px;
+height: 45px;
+background-color: #33FF00;
+moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border: 5px solid #009900;
+padding: 5px;
 }
 
-#footerright
+#info
 {
-width: 12%;
-height: 3%;
+padding: 0px 10px 10px 10px;
+margin: 0 0 0 255px;
+border: 1px solid red;
+}
 
-background-color:orange;
+#info p
+{
+}
 
-position:relative;
-display:inline-block;
+.project
+{
+font-size: medium;
+background-color: lightgray;
+width: 1000px;
+padding: 20px 20px 20px 20px;
 }
 
 @font-face {

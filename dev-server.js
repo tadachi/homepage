@@ -23,6 +23,7 @@ var home = require('express.io')();
 
 home.use('/js', express.static(__dirname + '/view/js'));
 home.use('/css', express.static(__dirname + '/view/css'));
+home.use('/fonts', express.static(__dirname + '/view/css/fonts'))
 home.use('/img', express.static(__dirname + '/view/img'));
 home.use('/pdf', express.static(__dirname + '/view/pdf'));
 home.use('/res', express.static(__dirname + '/view/res'));
