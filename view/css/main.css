@@ -1,33 +1,35 @@
+html
+{
+font-size: 0;
+padding: 0;
+margin: 0;
+}
+
 body
 {
 font-size: 0;
-
+padding: 0;
+margin: 0;
+width: 100%;
+background-color: darkblue;
 /* overflow:hidden;
 overflow-x:hidden;
 overflow-y:hidden;  */
 }
 
-#container
-{
-font-size: 0;
-
-background-color:gray;
-
-overflow:hidden;
-position:relative;
-display:inline-block;
-}
-
 #header
 {
-font-size: medium;
+font-size:medium;
 
-background-color: red;
+background-color:#606060;
 
-overflow:hidden;
+width: 100%;
+height: 40px;
+
 position:relative;
-display:inline-block;
 }
+
+#header a:visited { text-decoration: none; color: white; }
 
 .head:hover
 {
@@ -35,86 +37,99 @@ color:blue;
 background-color:yellow;
 
 cursor:pointer;
-overflow:hidden;
+
 position:relative;
-display:inline-block;
+}
+
+#container
+{
+font-size: 0;
+
+background-color:green;
+
+width: 100%;
+height: 2000px;
 }
 
 #center
 {
 font-size: 0;
 
-background-color:lightgray;
+width: 100%;
+height: 200px;
+
+background-color:lightblue
 font-family:Tahoma, Geneva, sans-serif;
 
-overflow:hidden;
 position:relative;
-display:inline-block;
-}
-
-.column
-{
-margin: 0 0 0px 385px;
-overflow: hidden;
-}
-
-.row-even
-{
-font-size: medium;
-background-color: lightgray;
-width: 100%;
-overflow: auto;
-padding: 50px 50px 50px 50px;
-}
-
-.row-odd
-{
-font-size: medium;
-background-color: lightblue;
-width: 100%;
-overflow: auto;
-padding: 50px 50px 50px 50px;
 }
 
 #footer
 {
 font-size: 0;
 
-background-color:lightgreen;
+width: 100%;
+height: 100px;
 
-overflow:hidden;
+background-color:lightblue;
+
 position:relative;
-display:inline-block;
+}
+
+.preview
+{
+float: left; border: 1px solid black;
+width: 250px;
+}
+
+.info
+{
+font-size: 24px;
+padding: 0px 20px 10px 10px;
+margin-left: 255px;
+border: 1px solid black;
 }
 
 .round
 {
 width: 67px;
 height: 45px;
-background-color: #33FF00;
+background-color:#33FF00;
 moz-border-radius: 12px;
 -webkit-border-radius: 12px;
 border: 5px solid #009900;
 padding: 5px;
 }
 
-#info
+.column
 {
-padding: 0px 10px 10px 10px;
-margin: 0 0 0 255px;
-border: 1px solid red;
+width: 1000px;
+overflow:hidden;
+border-radius: 25px;
+font-size:medium;
+background-color:#808080;
+margin: 0 auto;
+padding: 20px 20px 20px 20px;
+box-shadow: 3px 3px 2px 2px black
 }
 
-#info p
-{
-}
-
-.project
+.row
 {
 font-size: medium;
-background-color: lightgray;
-width: 1000px;
-padding: 20px 20px 20px 20px;
+background-color:lightblue;
+width: 100%;
+overflow: auto;
+padding: 20px 0px 20px 0px;
+}
+
+.skillset
+{
+display: inline-block;
+padding-right:50px;
+}
+
+.preview
+{
 }
 
 @font-face {

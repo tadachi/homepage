@@ -3,69 +3,18 @@
     <head>
         <meta content='text/html; charset=utf-8' http-equiv='content-type'>
         <title>Takumi Adachi's Homepage</title>
+        <meta name="description" content="Takumi's Official Website. Takumi Adachi's Official Website. Find out more about me, view my previous projects, and hire me!">
+        <meta name="keywords" content="Takumi Adachi, takada, php, javascript, html, twitter, github, web developer, html5, css3, blog, nodejs, python"/>
         <link rel='stylesheet' href='/css/main.css'>
         <link rel='stylesheet' href='/css/fonts.css'>
         <!--load JQuery before Angular-->
         <script src='js/jquery-2.1.1.min.js'></script>
-        <script src='js/pdfjs-1.0.68-dist/build/pdf.js'></script>
-
+<!--         <script src='js/pdfjs-1.0.68-dist/build/pdf.js'></script> -->
+<!--         <script src='js/viewer.js'></script> -->
         <!-- Angularjs -->
 <!--         <script src='js/angular.1.3.0b11.js'></script> -->
-
 <script>
 //     var app = angular.module('app', []);
-
-    function calcResolutions() {
-        var header = 36;
-        var footer = 300;
-
-        var currWinWidth = $(window).width();
-        var currWinHeight = $(window).height();
-
-        var containerWidth = (currWinWidth-20); //.54 is a % of the max width of $(window) or browserwidth.
-        var containerHeight = (currWinHeight-20);
-
-        var headerPanelWidth = Math.floor(currWinWidth-20);
-        var headerPanelHeight = Math.floor(header);
-
-        var centerPanelWidth = Math.floor(currWinWidth-20);
-        var centerPanelHeight = Math.floor(currWinHeight - header + footer);
-
-        var footerPanelWidth = Math.floor(currWinWidth-20);
-        var footerPanelHeight = Math.floor(footer);
-
-        return {
-                containerW: containerWidth, containerH: containerHeight,
-                headerW: headerPanelWidth, headerH: headerPanelHeight,
-                footerW: footerPanelWidth, footerH: footerPanelHeight,
-                centerW: centerPanelWidth, centerH: centerPanelHeight
-                };
-    }
-
-    function applyResolutions() {
-        res = calcResolutions();
-
-        $('#container').css('width', res.containerW);
-//         $('#container').css('height', res.containerH);
-
-        $('#header').css('width',res.headerW);
-        $('#header').css('height',res.headerH);
-
-        $('#center').css('width', res.centerW);
-//         $('#center').css('height', res.centerH);
-
-        $('#footer').css('width', res.footerW);
-        $('#footer').css('height', res.footerH);
-    }
-
-    $( document ).ready(function() {
-        applyResolutions();
-
-        /* Default page to load. */
-//         $( "#info" ).load("res/about.htm");
-//         window.location = "#about";
-
-    });
 /*
  * Shows if the website is online or not. *WIP
  */
@@ -140,81 +89,146 @@
     PDFJS.workerSrc = 'js/pdfjs-1.0.68-dist/build/pdf.worker.js';
 
 </script>
-
     </head>
     <body>
-        <div id='container'>
-            <div id='header'>
-                <div style='font-size: 200%; float: left; padding-right: 50px'>
-                <a href="/">Home</a></li>
-                <a href="/#resume">Resume</a></li>
-                <a href="/#resumev">Resume (Verbose)</a></li>
-                <a href="/#contact">Contact Me</a></li>
+        <div id='header' class='senlightfont' style='background-color: black; color: white; overflow: hidden'>
+            <div style='float: left;'>
+                <div style='font-size: 30px;'>
+                    <a href='/' style='padding-left: 50px; padding-right: 50px; margin-top: 8px; text-decoration: none;'>Home</a>
+                    <a href='https://github.com/tadachi' style='padding-right: 50px; text-decoration: none;'>Github</a>
+<!--                     <a href='/pdf/demo.pdf' style='padding-right: 50px; text-decoration: none;'>Resume</a> -->
+<!--                     <a href='/pdf/demo2.pdf' style='padding-right: 50px; text-decoration: none;'>Resume (Verbose)</a> -->
+                    <a href='/#contact' style='padding-right: 50px; text-decoration: none;'>Contact Me</a>
                 </div>
-                <icon class='icon-twitter size-36 step'></icon>
-                <icon class='icon-github size-36 step'></icon>
-                <icon class='icon-social-facebook size-36 step'></icon>
             </div>
-            <div id='center'>
-                <div class="row-even">
-                    <div class='column senlightfon'>
-                        <h1>Takumi Adachi</h1>
-                        <h3>Professional Web Developer</h3>
+            <div style='float: left;'>
+                <a href='https://twitter.com/tak_ada999'><icon class='icon-twitter size-36 step' style='margin-top: 10px;'></icon></a>
+                <a href='https://github.com/tadachi'><icon class='icon-github size-36 step'></icon></a>
+                <a href='https://www.facebook.com/tak.ada999'><icon class='icon-social-facebook size-36 step'></icon></a>
+            </div>
+
+        </div>
+
+        <div id='center'>
+            <div class='row' style='background-color: #3399CC;'>
+                <div class='column senlightfont' style='background-color: #E8E8E8; font-size: 27px; font-weight:bold;'>
+                    <h1>Takumi Adachi</h1>
+                    <h4>Professional Web Developer</h4>
+                    <h4>Information Technologist</h4>
+                </div>
+            </div>
+
+            <div class='row' style='background-color: #3399FF;'>
+                <div class='column senlightfont' style='background-color: #339FFF; color:white;'>
+                    <div class='skillset'>
+                        <icon class='icon-html size-100 step' style='display: inline-block; padding-left: 20px;'></icon>
+                        <div class='size-24' style='padding-left: 20px;'>HTML</div>
+                    </div>
+                    <div class='skillset'>
+                        <icon class='icon-css size-100 step' style='display: inline-block;'></icon>
+                        <div class='size-24'>CSS</div>
+                    </div>
+                     <div class='skillset'>
+                        <img src='img/javascript-icon.png' width='90' height='90' alt='JS' style:'display: inline-block;'/>
+                        <div class='size-24'>Javascript</div>
+                    </div>
+                    <div class='skillset'>
+                        <icon class='icon-nodejs size-100 step' style='display: inline-block;'></icon>
+                        <div class='size-24'>nodeJS</div>
+                    </div>
+                    <div class='skillset'>
+                        <icon class='icon-python size-100 step' style='display: inline-block;'></icon>
+                        <div class='size-24'>Python</div>
+                    </div>
+                    <div class='skillset'>
+                        <icon class='icon-ubuntu size-100 step' style='display: inline-block;'></icon>
+                        <div class='size-24'>Ubuntu</div>
+                    </div>
+
+                    <div class='skillset'>
+                        <img src='img/pc_repair.png' width='90' height='90' alt='JS' style:'display: inline-block;'/>
+                        <div class='size-24'>PC Builder</div>
                     </div>
                 </div>
-                <div class="row-odd">
-                    <div class='column project' style='background-color: orange;'>
-                        <div style='float: left; border: 1px solid red; width='250px''>
-                             <img src='img/srlplayer-small.png' width='250px'  />
-                        </div>
 
-                        <div id='info'>
-                            <p><strong>Project Title: </strong>srlplayer</p>
-                            <p><strong>Project URL: </strong><a href='http://srl.takbytes.com'>srl.takbytes.com</a></p>
-                            <p><strong>Source Code: </strong><a href='https://github.com/tadachi/srlplayer'>Github</a></p>
-                            <p><strong>Status: </strong><span style='color: lightgreen;'>Active</span></p>
-                            <p style='line-height:200%'>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                            <span class="label round">HTML</span>
-                            <span class="label round">CSS</span>
-                            <span class="label round">Javascript + jQuery</span>
-                            <span class="label round">NodeJS</span>
-                            <span class="label round">Git</span>
-                        </div>
+                <div class='column' style='background-color: #E8E8E8;'>
+                    <div style='line-height:150%; font-size: 24px;'>
+                        <p>I am a developer in Victoria, BC. Most of my projects are web based, But I can build a variety of web applications that fit your needs.
+                        My strong points include <b>HTML/CSS</b>, <b>Javascript(JQuery,AngularJS)</b>, and <b>NodeJS</b>.</p>
+                        <p>I'm not limited to just developing. I have also a strong background in Information Technology.
+                        I regularly troubleshoot networks, computers, and handhelds. You can count on me to quickly catch up to your IT practices.</p>
+                        <p>My favorite web hangouts include Hacker News, Reddit, Github, and Twitch. Kendo is my main physical activity and cycling is my main mode
+                        of transportation besides driving.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class='row' style='background-color: #33CCFF;'>
+                <div class='column' style='background-color: #E8E8E8;'>
+                    <div class='preview'>
+                         <img src='img/srlplayer-preview.jpg' width='250' height='150'/>
                     </div>
 
-                    <div class='column project' style='background-color: violet; margin-top: 50px;'>
-                        <div style='float: left; border: 1px solid red; width='250px''>
-                             <img src='img/srlplayer-small.png' width='250px'  />
+                    <div class='info'>
+                        <div style='line-height: 150%;'>
+                        <strong>Project Title: </strong>srlplayer<br />
+                        <strong>Project URL: </strong><a href='http://srl.takbytes.com'>srl.takbytes.com</a><br />
+                        <strong>Source Code: </strong><a href='https://github.com/tadachi/srlplayer'>Github</a><br />
+                        <strong>Demo Webm: </strong><a href='webm/srlplayer.webm'>Demo</a><br />
+                        <strong>Status: </strong><span style='color: #00FF33; font-weight:bold;'>Active/Live</span><br />
                         </div>
+                        <p style='line-height: 150%; font-size: 20px;'>
+                            This is a twitch streamer that grabs a list of streamers that specifically speedrun games at
+                            <a href='www.speedrunslive.com'>www.speedrunslive.com</a>. I made this web app because I wanted to maximize the video screen size
+                            without losing chat, make it minimal, and load very quickly. I learned how to code and debug HTML, CSS, Javascript(JQuery), and nodeJS.
+                            I also learned REST, JSON, browser compatibility, and callbacks. Overall, it was an excellent way to practice coding, debugging, and version control.
+                        </p>
+                        <span class="label round">HTML</span>
+                        <span class="label round">CSS</span>
+                        <span class="label round">Javascript + jQuery</span>
+                        <span class="label round">NodeJS</span>
+                        <span class="label round">Git</span>
+                    </div>
+                </div>
 
-                        <div id='info'>
-                            <p><strong>Project Title: </strong>multitwitchchat</p>
-                            <p><strong>Project URL: </strong><a href='http://mtc.takbytes.com'>mtc.takbytes.com</a></p>
-                            <p><strong>Source Code: </strong><a href='https://github.com/tadachi/multitwitchchat'>Github</a></p>
-                            <p><strong>Status: </strong><span style='color: lightgreen;'>Active</span></p>
-                            <p style='line-height:200%'>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                            <span class="label round">HTML</span>
-                            <span class="label round">CSS</span>
-                            <span class="label round">Javascript + jQuery + AngularJS</span>
-                            <span class="label round">NodeJS</span>
-                            <span class="label round">Git</span>
+                <div class='column' style='background-color: #E8E8E8; margin-top: 50px;'>
+                    <div class='preview'>
+                         <img src='img/multitwitchchat-preview.jpg' width='250' height='150' />
+                    </div>
+
+                    <div class='info'>
+                        <div style='line-height: 150%;'>
+                        <strong>Project Title: </strong>multitwitchchat<br />
+                        <strong>Project URL: </strong><a href='http://mtc.takbytes.com'>mtc.takbytes.com</a><br />
+                        <strong>Source Code: </strong><a href='https://github.com/tadachi/multitwitchchat'>Github</a><br />
+                        <strong>Demo Webm: </strong><a href='webm/multitwitchchat.webm'>Demo</a><br />
+                        <strong>Status: </strong><span style='color: #00FF33; font-weight:bold;'>Active/Live</span>
                         </div>
+                        <p style='line-height: 150%; font-size: 20px;'>
+                            This is a web app that allows you to search for twitch streamers and open just the chat for each one.
+                            I made this web app because I wanted to catch up on chat for the twitch streams I regularly watch.
+                            I chose to learn AngularJS for this app because directives are incredibly concise and reduce alot of the code
+                            for certain things compared to being implemented in JQuery alone.
+                        </p>
+                        <span class="label round">HTML</span>
+                        <span class="label round">CSS</span>
+                        <span class="label round">Javascript + jQuery + AngularJS</span>
+                        <span class="label round">NodeJS</span>
+                        <span class="label round">Git</span>
                     </div>
                 </div>
             </div>
             <div id='footer'>
-                <h1 id="contact">Contact Me</h1>
+                <div class='row senlightfont' style='background-color: #66CCFF;'>
+                    <div class='column senlightfont' style='background-color: #E8E8E8; font-size: 20px;'>
+                    <h2 id="contact">Contact Me</h2>
+                        <p>Got questions? Want to hire me? Problems with my web apps?</p>
+                        <p>Email me at takumiadachi [ at ] gmail dot com </p><br />
+                        <p>&copy; 2014 Takumi 'takada' Adachi</p>
+                    </div>
+                </div>
             </div>
         </div>
+
     </body>
 </html>

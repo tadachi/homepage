@@ -23,10 +23,11 @@ var home = require('express.io')();
 
 home.use('/js', express.static(__dirname + '/view/js'));
 home.use('/css', express.static(__dirname + '/view/css'));
-home.use('/fonts', express.static(__dirname + '/view/css/fonts'))
 home.use('/img', express.static(__dirname + '/view/img'));
+home.use('/fonts', express.static(__dirname + '/view/css/fonts'))
 home.use('/pdf', express.static(__dirname + '/view/pdf'));
 home.use('/res', express.static(__dirname + '/view/res'));
+home.use('/webm', express.static(__dirname + '/view/webm'));
 
 home.set('jsonp callback', true);
 /* Testing headers */

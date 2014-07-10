@@ -19,8 +19,10 @@
 
 .size-12 { font-size: 12px; }
 .size-24 { font-size: 24px; }
+.size-30 { font-size: 30px; }
 .size-36 { font-size: 36px; }
-
+.size-42 { font-size: 42px; }
+.size-100 { font-size: 90px; }
 .step
 {
 position: relative;
@@ -39,6 +41,20 @@ url("fonts/programming-icon.ttf") format("truetype"),
 url("fonts/programming-icon.svg#programming-icon") format("svg");
 font-weight: normal;
 font-style: normal;
+}
+
+[programming-icon]:before
+{
+font-family: "programming-icon" !important;
+content: attr(programming-icon);
+font-style: normal !important;
+font-weight: normal !important;
+font-variant: normal !important;
+text-transform: none !important;
+speak: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
 .icon-microscope:before,
@@ -131,16 +147,17 @@ font-style: normal;
 .icon-google-developers:before,
 .icon-google-code:before,
 .icon-kde:before,
-.icon-grails-alt:before {
-  font-family: "programming-icon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  text-decoration: inherit;
+.icon-grails-alt:before
+{
+font-family: "programming-icon";
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+display: inline-block;
+text-decoration: inherit;
 }
 
 .icon-microscope:before { content: "\f100"; }
@@ -235,114 +252,6 @@ font-style: normal;
 .icon-kde:before { content: "\f159"; }
 .icon-grails-alt:before { content: "\f15a"; }
 
-[programming-icon]:before {
-font-family: "programming-icon" !important;
-content: attr(programming-icon);
-font-style: normal !important;
-font-weight: normal !important;
-font-variant: normal !important;
-text-transform: none !important;
-speak: none;
-line-height: 1;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-}
-
-/* These classes only added to fix FontFamily to display FontProgrammingIcon during debug/inspection */
-/* .icon-osx,
-.icon-bomb,
-.icon-mobile-phone-broadcast,
-.icon-objc,
-.icon-nginx-alt2,
-.icon-mysql,
-.icon-phone-retro,
-.icon-netbsd,
-.icon-mobile-device,
-.icon-ruby-on-rails,
-.icon-phone-alt,
-.icon-line-graph,
-.icon-postgres,
-.icon-playframework,
-.icon-python,
-.icon-ruby-on-rails-alt,
-.icon-nginx,
-.icon-database-alt2,
-.icon-google-alt,
-.icon-microscope,
-.icon-blackberry,
-.icon-dreamhost,
-.icon-google,
-.icon-centos,
-.icon-kde,
-.icon-csharp,
-.icon-scala,
-.icon-redis,
-.icon-looking,
-.icon-database-alt,
-.icon-javascript,
-.icon-postgres-alt,
-.icon-linux-mint,
-.icon-ubuntu,
-.icon-apache,
-.icon-script-alt,
-.icon-mssql,
-.icon-c,
-.icon-gnome,
-.icon-java-duke,
-.icon-scala-alt,
-.icon-clojure,
-.icon-oracle-alt,
-.icon-redhat,
-.icon-haskell,
-.icon-3dprint,
-.icon-mariadb,
-.icon-java,
-.icon-script,
-.icon-cplusplus,
-.icon-jetty,
-.icon-perl,
-.icon-heroku,
-.icon-nginx-alt,
-.icon-iphone,
-.icon-splatter,
-.icon-shell,
-.icon-mysql-alt,
-.icon-wireless,
-.icon-ruby,
-.icon-playframework-alt,
-.icon-raspberrypi,
-.icon-suse,
-.icon-nodejs,
-.icon-java-bold,
-.icon-google-developers,
-.icon-mobile-phone-alt,
-.icon-grails-alt,
-.icon-coffee-bean,
-.icon-cassandra,
-.icon-google-code,
-.icon-fedora,
-.icon-antenna,
-.icon-hadoop,
-.icon-solaris,
-.icon-html,
-.icon-css,
-.icon-satellite,
-.icon-aws,
-.icon-mfizz,
-.icon-php,
-.icon-debian,
-.icon-ghost,
-.icon-php-alt,
-.icon-tomcat,
-.icon-database,
-.icon-grails,
-.icon-freebsd,
-.icon-oracle,
-.icon-fire-alt,
-.icon-platter{
-  font-family: "programming-icon";
-} */
-
 /*
  * Fontastic
  */
@@ -401,16 +310,17 @@ line-height: 1;
 .icon-chevron-right:before,
 .icon-phone-mobile:before,
 .icon-web:before,
-.icon-computer-macintosh-vintage:before {
-  font-family: "social-font";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  text-decoration: inherit;
+.icon-computer-macintosh-vintage:before
+{
+font-family: "social-font";
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+display: inline-block;
+text-decoration: inherit;
 }
 
 .icon-twitter:before {
