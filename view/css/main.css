@@ -29,17 +29,9 @@ height: 40px;
 position:relative;
 }
 
+#header a:link { text-decoration: none; color: white; padding-left: 25px; padding-right: 25px;}
 #header a:visited { text-decoration: none; color: white; }
-
-.head:hover
-{
-color:blue;
-background-color:yellow;
-
-cursor:pointer;
-
-position:relative;
-}
+#header a:active { text-decoration: none; color: white; }
 
 #container
 {
@@ -106,7 +98,6 @@ padding: 5px;
 width: 1000px;
 overflow:hidden;
 border-radius: 25px;
-font-size:medium;
 background-color:#808080;
 margin: 0 auto;
 padding: 20px 20px 20px 20px;
