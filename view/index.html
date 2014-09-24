@@ -9,86 +9,6 @@
         <link rel='stylesheet' href='/css/fonts.css'>
         <!--load JQuery before Angular-->
         <script src='js/jquery-2.1.1.min.js'></script>
-<!--         <script src='js/pdfjs-1.0.68-dist/build/pdf.js'></script> -->
-<!--         <script src='js/viewer.js'></script> -->
-        <!-- Angularjs -->
-<!--         <script src='js/angular.1.3.0b11.js'></script> -->
-<script>
-//     var app = angular.module('app', []);
-/*
- * Shows if the website is online or not. *WIP
- */
-//     app.directive('isOnline', function() {
-//         return {
-//             $scope: {
-//                 value: '=',
-//                 href: '=',
-//                 link: '@',
-//             },
-//             restrict: 'AEC',
-// //             controller: function($scope, $element){
-// //                 $scope.value = 'pinging...';
-// //                 $scope.href = $element.attr('link');
-// //                 console.log($element.attr('link'));
-// //             },
-//             cache: false,
-//             link: function($scope, $element) {
-//                 $scope.value = 'pinging...';
-//                 $scope.href = $element.attr('link');
-
-//                 var url = $element.attr('link');
-//                 //var url = 'http://whateverorigin.org/get?url=' + encodeURIComponent($element.attr('link')) + '&callback=?';
-//                 //var url = 'http://whateverorigin.org/get?url=' + encodeURIComponent($element.attr('link')) + '&callback=?';
-// //                 $.getJSON(url, function(data){
-// //                     console.log(data);
-// //                 });
-//                 $.ajax({
-//                     url: $element.attr('link'),
-//                     timeout: 1000,
-//                     dataType: 'json',
-//                     statusCode: {
-//                         200: function() {
-//                             console.log('200');
-//                             $scope.$apply(function() {
-//                                 $scope.value = '200';
-//                             });
-//                         },
-//                         404: function() {
-//                             console.log('400');
-//                             $scope.$apply(function() {
-//                                 $scope.value = 'loading';
-//                             });
-//                         },
-//                         500: function() {
-//                             console.log('500');
-//                             $scope.$apply(function() {
-//                                 $scope.value = '500';
-//                             });
-//                         },
-//                         503: function() {
-//                             console.log('503');
-//                             $scope.$apply(function() {
-//                                 $scope.value = '500';
-//                             });
-//                         }
-//                     }
-//                 }).done(function(data) {
-//                     console.log(url);
-//                     console.log(data);
-//                 }).fail(function(data) {
-//                     console.log(url);
-//                     console.log(data);
-//                 })
-
-//             }
-//         };
-//     });
-
-    //'use strict';
-
-    //PDFJS.workerSrc = 'js/pdfjs-1.0.68-dist/build/pdf.worker.js';
-
-</script>
     </head>
     <body>
         <div id='header' class='senlightfont' style='background-color: black; color: white; overflow: hidden'>
@@ -96,13 +16,13 @@
                 <div id='menu' style='font-size: 30px;'>
                     <a href='/'>Home</a>
                     <a href='https://github.com/tadachi'>Github</a>
-                    <a href='http://resume.github.io/?tadachi''>Resume(Github)</>
-                    <a href='/pdf/tadachi-resume.pdf'>Resume(Traditional)</a>
+                    <a href='http://resume.github.io/?tadachi'>Resume(Github)</a>
+                    <!--<a href='/pdf/tadachi-resume.pdf'>Resume(Traditional)</a>-->
                     <a href='/#contact'>Contact Me</a>
                 </div>
             </div>
             <div style='float: left;'>
-                <a href='https://twitter.com/tak_ada999'><icon class='icon-twitter size-36 step' style='margin-top: 10px;'></icon></a>
+                <a href='https://twitter.com/takumikun'><icon class='icon-twitter size-36 step' style='margin-top: 10px;'></icon></a>
                 <a href='https://github.com/tadachi'><icon class='icon-github size-36 step'></icon></a>
                 <a href='https://www.facebook.com/tak.ada999'><icon class='icon-social-facebook size-36 step'></icon></a>
             </div>
@@ -113,7 +33,7 @@
             <div class='row' style='background-color: #3399CC;'>
                 <div class='column senlightfont' style='background-color: #E8E8E8; font-size: 27px; font-weight:bold;'>
                     <h1>Takumi Adachi</h1>
-                    <h4>Professional Web Developer</h4>
+                    <h4>Programmer/Web Developer</h4>
                     <h4>Information Technologist</h4>
                 </div>
             </div>
@@ -155,7 +75,7 @@
                     </div> -->
                 </div>
 
-                <div class='column' style='background-color: #E8E8E8;'>
+                <div class='column' style='background-color: #FFFFFF;'>
                     <div style='line-height:150%; font-size: 23px;'>
                         <p>I am a developer in Victoria, BC. Most of my projects are web based, But I can build a variety of web applications that fit your needs.
                         My strong points include <b>HTML/CSS</b>, <b>Javascript(JQuery,AngularJS)</b>, and <b>NodeJS</b>.</p>
@@ -168,9 +88,9 @@
             </div>
 
             <div class='row' style='background-color: #33CCFF;'>
-                <div class='column' style='background-color: #E8E8E8;'>
-                    <div class='preview'>
-                         <img src='img/srlplayer-preview.jpg' width='250' height='150'/>
+                <div class='column' style='background-color: #FFFFFF;'>
+                    <div>
+                         <img class='preview' src='img/srlplayer-preview.jpg' width='250' height='150'/>
                     </div>
 
                     <div class='info'>
@@ -194,19 +114,17 @@
                         <span class="label round">Git</span>
                     </div>
                 </div>
-
-                <div class='column' style='background-color: #E8E8E8; margin-top: 50px;'>
-                    <div class='preview'>
-                         <img src='img/multitwitchchat-preview.jpg' width='250' height='150' />
+                <div class='column' style='background-color: #FFFFFF; margin-top: 50px;'>
+                    <div>
+                         <img class='preview' src='img/multitwitchchat-preview.jpg' width='250' height='150' />
                     </div>
-
                     <div class='info'>
                         <div style='line-height: 150%;'>
                         <strong>Project Title: </strong>multitwitchchat<br />
                         <strong>Project URL: </strong><a href='http://mtc.takbytes.com'>mtc.takbytes.com</a><br />
                         <strong>Source Code: </strong><a href='https://github.com/tadachi/multitwitchchat'>Github</a><br />
                         <strong>Demo Webm: </strong><a href='webm/multitwitchchat.webm'>Demo</a><br />
-                        <strong>Status: </strong><span style='color: #00FF33; font-weight:bold;'>Active/Live</span>
+                        <strong>Status: </strong><span style='color: #FFCC00; font-weight:bold;'>Maintenance</span>/<span style='color: #00FF33; font-weight:bold;'>Live</style>
                         </div>
                         <p style='line-height: 150%; font-size: 20px;'>
                             This is a web app that allows you to search for twitch streamers and open just the chat for each one.
@@ -221,14 +139,53 @@
                         <span class="label round">Git</span>
                     </div>
                 </div>
+                <div class='column' style='background-color: #FFFFFF; margin-top: 50px;'>
+                    <div>
+                         <img class='preview' src='img/miniview-preview.jpg' width='120' height='400' />
+                    </div>
+                    <div class='info'>
+                        <div style='line-height: 150%;'>
+                        <strong>Project Title: </strong>Miniview<br />
+                        <strong>Project URL: </strong><a href='https://play.google.com/store/apps/details?id=org.app.miniview'>Google Play Store</a><br />
+                        <strong>Source Code: </strong><a href='https://github.com/tadachi/miniview'>Github</a><br />
+                        <strong>Status: </strong><span style='color: #FFCC00; font-weight:bold;'>Maintenance</span>/<span style='color: #00FF33; font-weight:bold;'>Live</style>
+                        </div>
+                        <p style='line-height: 150%; font-size: 20px;'>
+                            This android app is ideal for reading locally stored manga. It features cycling to the next chapter/folder upon hitting next on the last image
+                            allowing a seamless reading experience. Supports PNG and JPG.
+                        </p>
+                        <span class="label round">Python</span>
+                        <span class="label round">Kivy</span>
+                        <span class="label round">Git</span>
+                    </div>
+                </div>
+                <div class='column' style='background-color: #FFFFFF; margin-top: 50px;'>
+                    <div>
+                         <img class='preview' src='img/mangaget-preview.png' width='120' height='230' />
+                    </div>
+                    <div class='info'>
+
+                        <div style='line-height: 150%;'>
+                        <strong>Project Title: </strong>Mangaget<br />
+                        <strong>Source Code: </strong><a href='https://github.com/tadachi/mangaget'>Github</a><br />
+                        <strong>Status: </strong><span style='color: #FFCC00; font-weight:bold;'>Maintenance</span>
+                        </div>
+                        <p style='line-height: 150%; font-size: 20px;'>
+                            This is a CLI (Commando line) program that allows you to download all and the latest chapter, download in ranges (1 to 3, 4-7, etc) and download missing pages and chapters.
+                            Makes use of python parsers to find all the obscure CDN urls and aggregate them into a json file for downloading, and guaranteeing integrity, page and chapter order.
+                        </p>
+                        <span class="label round">Python</span>
+                        <span class="label round">Git</span>
+                    </div>
+                </div>
             </div>
             <div id='footer'>
                 <div class='row senlightfont' style='background-color: #66CCFF;'>
-                    <div class='column senlightfont' style='background-color: #E8E8E8; font-size: 20px;'>
+                    <div class='column senlightfont' style='background-color: #FFFFFF; font-size: 20px;'>
                     <h2 id="contact">Contact Me</h2>
-                        <p>Got questions? Want to hire me? Problems with my web apps?</p>
+                        <p>Got questions? Want to hire me? Problems with my (web)apps?</p>
                         <p>Email me at takumiadachi [ at ] gmail dot com </p><br />
-                        <p>&copy; 2014 Takumi 'takada' Adachi</p>
+                        <p>&copy; 2014-2015 Takumi 'takada' Adachi</p>
                     </div>
                 </div>
             </div>

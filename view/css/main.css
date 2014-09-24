@@ -121,7 +121,12 @@ padding-right:50px;
 
 .preview
 {
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
+
+
 
 @font-face {
 font-family: 'SansationLight';
