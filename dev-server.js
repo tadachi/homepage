@@ -1,6 +1,6 @@
 var express         = require('express');
 // var bodyParser      = require('body-parser'); // Deprecated in Express 4.x.x
-var methodOverride  = require('method-override');
+//var methodOverride  = require('method-override');
 var router          = express.Router();
 var vhost           = require('vhost');
 var app             = require('express.io')();
