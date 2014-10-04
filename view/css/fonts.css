@@ -34,11 +34,11 @@ margin: 0 0 0 0;
 @font-face
 {
 font-family: "programming-icon";
-src: url("fonts/programming-icon.eot");
-src: url("fonts/programming-icon.eot?#iefix") format("embedded-opentype"),
-url("fonts/programming-icon.woff") format("woff"),
-url("fonts/programming-icon.ttf") format("truetype"),
-url("fonts/programming-icon.svg#programming-icon") format("svg");
+src: url("../fonts/programming-icon.eot");
+src: url("../fonts/programming-icon.eot?#iefix") format("embedded-opentype"),
+url("../fonts/programming-icon.woff") format("woff"),
+url("../fonts/programming-icon.ttf") format("truetype"),
+url("../fonts/programming-icon.svg#programming-icon") format("svg");
 font-weight: normal;
 font-style: normal;
 }
@@ -260,11 +260,11 @@ text-decoration: inherit;
 @font-face
 {
 font-family: "social-font";
-src:url("fonts/social-font.eot");
-src:url("fonts/social-font.eot?#iefix") format("embedded-opentype"),
-url("fonts/social-font.woff") format("woff"),
-url("fonts/social-font.ttf") format("truetype"),
-url("fonts/social-font.svg#social-font") format("svg");
+src:url("../fonts/social-font.eot");
+src:url("../fonts/social-font.eot?#iefix") format("embedded-opentype"),
+url("../fonts/social-font.woff") format("woff"),
+url("../fonts/social-font.ttf") format("truetype"),
+url("../fonts/social-font.svg#social-font") format("svg");
 font-weight: normal;
 font-style: normal;
 }

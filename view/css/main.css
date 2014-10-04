@@ -17,6 +17,37 @@ overflow-x:hidden;
 overflow-y:hidden;  */
 }
 
+.skillset
+{
+display: inline-block;
+padding-right:50px;
+}
+
+.info
+{
+font-size: 24px;
+padding: 0px 0px 0px 0px;
+margin-bottom: 50px;
+}
+
+.round
+{
+width: 67px;
+height: 45px;
+background-color:#33FF00;
+moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border: 5px solid #009900;
+padding: 5px;
+}
+
+.preview
+{
+float: right;
+margin-bottom: 30px;
+}
+
+/*
 #header
 {
 font-size:medium;
@@ -32,16 +63,6 @@ position:relative;
 #header a:link { text-decoration: none; color: white; padding-left: 25px; padding-right: 25px;}
 #header a:visited { text-decoration: none; color: white; }
 #header a:active { text-decoration: none; color: white; }
-
-#container
-{
-font-size: 0;
-
-background-color:green;
-
-width: 100%;
-height: 2000px;
-}
 
 #center
 {
@@ -113,25 +134,15 @@ overflow: auto;
 padding: 20px 0px 20px 0px;
 }
 
-.skillset
-{
-display: inline-block;
-padding-right:50px;
-}
 
-.preview
-{
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
 
+
+*/
 @font-face {
 font-family: 'SansationLight';
-src: url('./SansationLight.eot');
-src: local('SansationLight'), url('./SansationLight.woff') format('woff'), url('./SansationLight.ttf') format('truetype');
+src: url('../fonts/SansationLight.eot');
+src: local('../fonts/SansationLight'), url('../fonts/SansationLight.woff') format('woff'), url('../fonts/SansationLight.ttf') format('truetype');
 }
-
 /* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_423">Text with this font applied</p> */
 .senlightfont {
     font-family: 'SansationLight' !important;

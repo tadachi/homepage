@@ -1,30 +1,29 @@
 var express         = require('express');
-var bodyParser      = require('body-parser');
+// var bodyParser      = require('body-parser'); // Deprecated in Express 4.x.x
 var methodOverride  = require('method-override');
-var port            = parseInt(process.env.PORT, 10) || 4000;
-var fs              = require('fs');
-var path            = require('path');
 var router          = express.Router();
 var vhost           = require('vhost');
 var app             = require('express.io')();
-app.http().io();
 
+
+app.http().io();
+var port = parseInt(process.env.PORT, 10) || 4000;
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded());
+// app.use(bodyParser.urlencoded());
 
 // parse application/json
-app.use(bodyParser.json());
+// app.use(bodyParser.json()); Deprecated in Express 4.x.x
 
 // app.use(methodOverride());
-app.listen(port);
-app.enable('trust proxy');
+app.listen(port, '192.168.1.3');
+//app.enable('trust proxy');
 
 var home = require('express.io')();
 
 home.use('/js', express.static(__dirname + '/view/js'));
 home.use('/css', express.static(__dirname + '/view/css'));
 home.use('/img', express.static(__dirname + '/view/img'));
-home.use('/fonts', express.static(__dirname + '/view/css/fonts'))
+home.use('/fonts', express.static(__dirname + '/view/fonts'))
 home.use('/pdf', express.static(__dirname + '/view/pdf'));
 home.use('/res', express.static(__dirname + '/view/res'));
 home.use('/webm', express.static(__dirname + '/view/webm'));
@@ -43,7 +42,7 @@ home.set('jsonp callback', true);
 //     next();
 // });
 
-var hostname = 'www.tak.com';
+var hostname = 'beastmachine';
 app.use(vhost(hostname, home));
 
 home.get('/', function(req, res) {
