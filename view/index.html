@@ -13,6 +13,16 @@
     <!--load JQuery before Angular-->
     <script src='js/jquery-2.1.1.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-55847588-2', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 <body>
 <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
@@ -34,7 +44,7 @@
                 <li><a href='#' >Home</a></li>
                 <li><a href='/#projects' >Projects</a></li>
                 <li><a href='https://github.com/tadachi' target="_blank">Github</a></li>
-                <li><a href='http://careers.stackoverflow.com/tadachi' target="_blank">StackCareers 2.0 resume</a></li>
+                <li><a href='http://careers.stackoverflow.com/tadachi' target="_blank">StackCareers 2.0 Resume</a></li>
                 <li><a href='/#contact'>Contact Me</a></li>
             </ul>
         </div>
@@ -213,7 +223,7 @@
                 <span class="maintenance">Maintenance</span>
             </div>
             <p class="project-summary">
-                This is a CLI (Commando line) program that allows you to download all and the latest chapter, download in ranges (1 to 3, 4-7, etc) and download missing pages and chapters.
+                This is a CLI program that allows you to download all and the latest chapter, download in ranges (1 to 3, 4-7, etc) and download missing pages and chapters.
                 Makes use of python parsers to find all the obscure CDN urls and aggregate them into a json file for downloading, and guaranteeing integrity, page and chapter order.
             </p>
             <span class="label round">Python</span>
