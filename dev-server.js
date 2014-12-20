@@ -15,7 +15,7 @@ var port = parseInt(process.env.PORT, 10) || 4000;
 // app.use(bodyParser.json()); Deprecated in Express 4.x.x
 
 // app.use(methodOverride());
-app.listen(port, '192.168.1.3');
+app.listen(port, '127.0.0.1');
 //app.enable('trust proxy');
 
 var home = require('express.io')();
@@ -42,7 +42,7 @@ home.set('jsonp callback', true);
 //     next();
 // });
 
-var hostname = 'beastmachine';
+var hostname = 'localhost';
 app.use(vhost(hostname, home));
 
 home.get('/', function(req, res) {
