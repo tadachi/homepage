@@ -12,9 +12,6 @@ padding: 0;
 margin: 0;
 width: 100%;
 background-color: darkblue;
-/* overflow:hidden;
-overflow-x:hidden;
-overflow-y:hidden;  */
 }
 
 .links
@@ -97,6 +94,7 @@ font-family: 'SansationLight';
 src: url('../fonts/SansationLight.eot');
 src: local('../fonts/SansationLight'), url('../fonts/SansationLight.woff') format('woff'), url('../fonts/SansationLight.ttf') format('truetype');
 }
+
 /* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_423">Text with this font applied</p> */
 .senlightfont {
     font-family: 'SansationLight' !important;
